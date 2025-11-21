@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario </title>
+
+</head>
+<body>
+  <h1>Formulario</h1>
+  <!-- Título principal de la página -->
+  <form>
+
+    <!-- Campo de texto para el nombre del usuario -->
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre"><br><br>
+
+    <!-- Campo de texto para el apellido del usuario -->
+    <label>Apellido:</label><br>
+    <input type="text" name="apellido"><br><br>
+
+    <!-- Menú desplegable para seleccionar el tipo de identificación -->
+    <label>Tipo de Identificación:</label><br>
+    <select name="tipo_identificacion">
+      <option value = "seleccione el tipo de documento">Selecione el tipo de documento...</option>
+      <option value="CC">Cédula de Ciudadanía (CC)</option>
+      <option value="TI">Tarjeta de Identidad (TI)</option>
+      <option value="PA">Pasaporte (PA)</option>
+    </select><br><br>
+
+    <!-- Campo de texto para ingresar el número de identificación -->
+    <label>Número de Identificación:</label><br>
+    <input type="text" name="numero_identificacion"><br><br>
+
+    <!-- Campo de selección de fecha para la fecha de nacimiento -->
+    <label>Fecha de Nacimiento:</label><br>
+    <input type="date" name="fecha_nacimiento"><br><br>
+
+    <!-- Campo de teléfono para el número de celular -->
+    <label>Número de Celular:</label><br>
+    <input type = "tel" name="celular" placeholder="Ej: 300 4177843" required><br><br>
+    
+
+    <!-- Casilla de verificación para aceptar la política de datos -->
+    <input type="checkbox" name="politica_datos"> 
+    Acepto la política de tratamiento de datos.<br><br>
+
+    <!-- Botón para enviar el formulario -->
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+</html>
