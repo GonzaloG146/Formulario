@@ -38,8 +38,19 @@
 
     <!-- Campo de teléfono para el número de celular -->
     <label>Número de Celular:</label><br>
-    <input type = "tel" name="celular" placeholder="Ej: 300 4177843" required><br><br>
+    <input type="tel" name="celular" placeholder="Ej: 3004177843" pattern="[0-9]+" inputmode="numeric" required><br><br>
+
+
+    <label>Correo:</label><br>
+    <input type = "tex" name="correo" placeholder="micorre@gmail.com" required><br><br>
     
+    <label>Pais de domicilio:</label><br>
+    <input type = "tex" name="domicilio"  required><br><br>
+
+    <label>Ciudad de domicilio</label><br>
+    <input type = "tex" name="domicilio placeholder="Ej: 300 4177843" required><br><br>
+
+
 
     <!-- Casilla de verificación para aceptar la política de datos -->
     <input type="checkbox" name="politica_datos"> 
@@ -49,10 +60,7 @@
     <input type="submit" value="Enviar">
   </form>
   </div>
-    <div class="texto2">
-     <a href="http://127.0.0.1:5500/index.html"> Volver</a>
-  </div>
-</div>
+    
 
 </body>
 </html>
