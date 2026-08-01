@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Formulario </title>
-  <link rel="stylesheet" href="Style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/Style.css">
 </head>
+
 <body>
-  <h1>Formulario</h1>
-  <!-- Título principal de la página -->
-  <form>
 
-    <!-- Campo de texto para el nombre del usuario -->
-    <label>Nombre:</label><br>
-    <input type="text" name="nombre"><br><br>
+    <h1>Formulario</h1>
 
-    <!-- Campo de texto para el apellido del usuario -->
-    <label>Apellido:</label><br>
-    <input type="text" name="apellido"><br><br>
+    <form>
 
-    <!-- Menú desplegable para seleccionar el tipo de identificación -->
-    <label>Tipo de Identificación:</label><br>
-    <select name="tipo_identificacion">
-      <option value = "seleccione el tipo de documento">Selecione el tipo de documento...</option>
-      <option value="CC">Cédula de Ciudadanía (CC)</option>
-      <option value="TI">Tarjeta de Identidad (TI)</option>
-      <option value="PA">Pasaporte (PA)</option>
-    </select><br><br>
+        <!-- Nombre -->
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-    <!-- Campo de texto para ingresar el número de identificación -->
-    <label>Número de Identificación:</label><br>
-    <input type="text" name="numero_identificacion"><br><br>
+        <!-- Apellido -->
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br><br>
 
-    <!-- Campo de selección de fecha para la fecha de nacimiento -->
-    <label>Fecha de Nacimiento:</label><br>
-    <input type="date" name="fecha_nacimiento"><br><br>
+        <!-- Tipo de documento -->
+        <label for="tipo_identificacion">Tipo de Identificación:</label><br>
+        <select id="tipo_identificacion" name="tipo_identificacion" required>
+            <option value="" selected disabled>Seleccione el tipo de documento...</option>
+            <option value="CC">Cédula de Ciudadanía (CC)</option>
+            <option value="TI">Tarjeta de Identidad (TI)</option>
+            <option value="PA">Pasaporte (PA)</option>
+        </select><br><br>
 
-    <!-- Campo de teléfono para el número de celular -->
-    <label>Número de Celular:</label><br>
-    <input type="tel" name="celular" placeholder="Ej: 3004177843" pattern="[0-9]+" inputmode="numeric" required><br><br>
+        <!-- Número de identificación -->
+        <label for="numero_identificacion">Número de Identificación:</label><br>
+        <input
+            type="text"
+            id="numero_identificacion"
+            name="numero_identificacion"
+            placeholder="Ej: 123456789"
+            maxlength="12"
+            pattern="[0-9]+"
+            inputmode="numeric"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+            required><br><br>
 
+        <!-- Fecha de nacimiento -->
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
 
-    <label>Correo:</label><br>
-    <input type = "tex" name="correo" placeholder="micorre@gmail.com" required><br><br>
-    
-    <label>Pais de domicilio:</label><br>
-    <input type = "tex" name="domicilio"  required><br><br>
+        <!-- Número de celular -->
+        <label for="celular">Número de Celular:</label><br>
+        <input
+            type="tel"
+            id="celular"
+            name="celular"
+            placeholder="Ej: 3004177843"
+            maxlength="10"
+            pattern="[0-9]{10}"
+            inputmode="numeric"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+            required><br><br>
 
-    <label>Ciudad de domicilio</label><br>
-    <input type = "tex" name="domicilio placeholder="Ej: 300 4177843" required><br><br>
+        <!-- Correo -->
+        <label for="correo">Correo Electrónico:</label><br>
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="micorreo@gmail.com"
+            required><br><br>
 
+        <!-- País -->
+        <label for="pais">País de domicilio:</label><br>
+        <input
+            type="text"
+            id="pais"
+            name="pais"
+            placeholder="Ej: Colombia"
+            required><br><br>
 
+        <!-- Ciudad -->
+        <label for="ciudad">Ciudad de domicilio:</label><br>
+        <input
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            placeholder="Ej: Bogotá"
+            required><br><br>
 
-    <!-- Casilla de verificación para aceptar la política de datos -->
-    <input type="checkbox" name="politica_datos"> 
-    Acepto la política de tratamiento de datos.<br><br>
+        <!-- Política de datos -->
+        <input type="checkbox" id="politica_datos" name="politica_datos" required>
+        <label for="politica_datos">
+            Acepto la política de tratamiento de datos.
+        </label><br><br>
 
-    <!-- Botón para enviar el formulario -->
-    <input type="submit" value="Enviar">
-  </form>
-  </div>
-    
+        <!-- Botón -->
+        <input type="submit" value="Enviar">
+
+    </form>
 
 </body>
 </html>
